@@ -10,8 +10,10 @@
         public $director;
         public $cast;
 
-        public function __construct()
+        public function __construct($title, $genre)
         {
+            $this->title = $title;
+            $this->genre = $genre;
             $this->description = 'UNKNOWN';
             $this->director = 'UNKNOWN';
             
@@ -36,18 +38,18 @@
 
     }
 
-    $movie1 = new Movie();
-    $movie1->title = 'Poor Things';
-    $movie1->setGenre('Comedy/Drama');
+    $movie1 = new Movie('Poor Things', 'Comedy/Drama');
+    // $movie1->title = 'Poor Things';
+    // $movie1->setGenre('Comedy/Drama');
 
 
     var_dump($movie1);
     var_dump($movie1->getGenre());
 
 
-    $movie2 = new Movie();
-    $movie2->title = 'Dune';
-    $movie2->setGenre('Sci-fi');
+    $movie2 = new Movie('Dune', 'Sci-fi');
+    // $movie2->title = 'Dune';
+    // $movie2->setGenre('Sci-fi');
 
 
     var_dump($movie2);
